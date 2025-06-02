@@ -4,7 +4,7 @@ import java.util.*;
 
 public class TwoSum {
     public static int[] twoSum(int[] nums, int target)  {
-        Map<Integer, Integer> lookup = new HashMap<>();
+        HashMap<Integer, Integer> lookup = new HashMap<>();
         for (int i =0; i < nums.length; i++) {
             int value = nums[i];
 
@@ -16,7 +16,6 @@ public class TwoSum {
             int complement = target - value;
             lookup.put(complement, i);
         }
-        System.out.println(lookup);
         return new int[]{-1, -1};
     }
 }
